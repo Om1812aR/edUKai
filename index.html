@@ -13,7 +13,10 @@
 <link rel="canonical" href="https://edukai.com/">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="hd-ft.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 
 
 
@@ -37,28 +40,9 @@
 <meta name="msapplication-navbutton-color" content="#2C3E50"> <!-- Opera, IE -->
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Safari/iOS -->
 <meta name="color-scheme" content="dark light"> <!-- Firefox, Opera, others -->
-
-<!-- ✅ Structured Data (SEO Rich Results) -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "edUKai",
-    "url": "https://yourwebsite.com",
-    "logo": "https://yourwebsite.com/images/logo.png",
-    "founders": [
-        {"@type": "Person", "name": "Omar Gouda"},
-        {"@type": "Person", "name": "Mariam Ramadan"}
-    ],
-    "description": "edUKai is a teaching company offering authentic, personalized courses and mentorship founded by Omar Gouda & Mariam Ramadan.",
-    "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "Egypt"
-    }
-}
-</script>
-
 </head>
+
+
 <body>
 <!-- ========== HEADER ========== -->
 <header class="site-header" role="banner" aria-label="edUKai header">
@@ -71,23 +55,27 @@
         <div class="title">edUKai</div>
         </div>
 
+        <!-- _________________________________________________________________________________________________________________ -->
+
         <!-- Navigation & Auth -->
         <div style="display:flex;align-items:center;gap:18px">
         <nav class="main-nav" aria-label="Main navigation">
             <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="courses.html">Courses</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
 
         <div class="auth" aria-hidden="false">
-            <a class="btn btn-register" href="#register"><i class="fa-solid fa-user-plus"></i> Register</a>
-            <a class="btn btn-login" href="#signin"><i class="fa-solid fa-right-to-bracket"></i> Sign in</a>
+            <a class="btn btn-register" href="signup.html"><i class="fa-solid fa-user-plus"></i> Register</a>
+            <a class="btn btn-login" href="signin.html"><i class="fa-solid fa-right-to-bracket"></i> Sign in</a>
         </div>
         </div>
     </div>
+
+    <!-- ______________________________________________________________________________________________________________________ -->
 
     <!-- HERO -->
     <div class="hero" id="home" role="region" aria-label="Hero">
@@ -96,10 +84,13 @@
             <h1 class="hero-title">Practical Courses that Shape Your Future</h1>
             <p class="lead">edUKai bridges knowledge and practice with hands-on learning in tech, English, and translation — designed for ambitious learners like you.</p>
 
-        <div class="hero-ctas">
-            <a class="cta-primary" href="#courses">Explore Courses</a>
-            <a class="cta-secondary" href="#about"><i class="fa-regular fa-circle-play"></i> Watch Intro</a>
-        </div>
+<div class="hero-ctas">
+  <a class="cta-primary" href="courses.html">Explore Courses</a>
+  <a class="cta-secondary" href="#" id="watch-intro">
+    <i class="fa-regular fa-circle-play"></i> Watch Intro
+  </a>
+</div>
+
         </div>
 
         <div class="hero-media" aria-hidden="false">
@@ -117,129 +108,360 @@
     </div>
 </header>
 
+<!-- ____________________________________________________________________________________________________________________________ -->
+
 <!-- separator -->
 <div class="header-sep" aria-hidden="true"></div>
 
+<!-- ____________________________________________________________________________________________________________________________ -->
+
 <!-- ========== MAIN ========== -->
 <main class="container" id="main">
-    <!-- ABOUT / FOUNDERS -->
-    <section id="about" aria-labelledby="about-title">
-    <h3 id="about-title" class="section-title">About edUKai</h3>
-<p style="margin-bottom:18px;color:var(--muted)">
-edUKai was founded by educators <strong>Omar Gouda</strong> &amp; <strong>Mariam Ramadan</strong> 
-to share practical, career-ready skills with students nationwide.
-</p>
+  <!-- OUR STORY -->
+  <section id="our-story" class="story-card" aria-labelledby="story-title">
+    <h2 id="story-title" class="story-title">✨ Our Story ✨</h2>
+    <p>
+      <strong>edUKai</strong> was born from the passion of two dedicated educators:
+      <strong>Omar Gouda</strong>, a newbie frontend engineer, and 
+      <strong>Mariam Ramadan</strong>, a brilliant teacher and lifelong learner.
+    </p>
+    <p>
+      This platform is more than just a learning hub—it is a heartfelt gift
+      from Omar to Mariam, to honor her incredible hard work in teaching,
+      her persistence in every phase of her life, and her drive to inspire
+      students with meaningful, career-ready skills.
+    </p>
+    <p>
+      Together, they built edUKai as a community where knowledge is shared,
+      creativity is celebrated, and students are empowered to achieve more. 🌱
+    </p>
+  </section>
 
-<div class="founders">
-<div class="founder">
-    <img src="images/Omar-Founder.jpg" alt="Omar Gouda">
-    <div>
-    <h4>Omar Gouda</h4>
-    <p>Frontend Developer &amp; Instructor. Omar teaches modern <strong>HTML, CSS, JavaScript, and React</strong> through hands-on projects and real-world examples.</p>
+  <!-- ____________________________________________________________________________________________________________________ -->
+
+<!-- ========== FOUNDERS ========== -->
+<section id="founders" aria-labelledby="founders-title">
+  <div class="story-card">
+    <h2 id="founders-title" class="story-title">Meet Our Founders</h2>
+    <p style="max-width: 650px; margin: 0 auto 1.5rem; color: var(--muted);">
+      Behind edUKai are two passionate educators who believe in knowledge, growth, and guiding students to success.
+    </p>
+  </div>
+
+  <div class="founders-grid">
+    
+    <!-- Omar Card -->
+    <div class="founder-card">
+      <div class="founder-inner">
+        <div class="founder-front">
+          <img src="images/Omar-Founder.jpg" alt="Omar Gouda">
+          <h3>Omar Gouda</h3>
+          <p>Frontend Developer & Lifelong Learner</p>
+          <span class="hint">Hover to read his story →</span>
+        </div>
+        <div class="founder-back">
+          <h3>Omar Gouda</h3>
+          <p>
+            Omar graduated from the Faculty of Commerce & Business Administration – Helwan University.  
+            His journey began with languages: English, German, and Japanese, before discovering a passion for the web’s own languages: <strong>HTML, CSS, JavaScript</strong>.  
+          </p>
+          <p>
+            With determination, he built his roadmap and turned his dream into reality: creating edUKai.  
+            This platform is his gift of knowledge, crafted with love and persistence, to inspire learners everywhere.
+          </p>
+        </div>
+      </div>
     </div>
-</div>
 
-<div class="founder">
-    <img src="images/Mariam-Founder.jpg" alt="Mariam Ramadan">
-    <div>
-    <h4>Mariam Ramadan</h4>
-    <p>English &amp; Translation Mentor. Mariam helps learners improve <strong>communication, writing, and translation skills</strong> with personalized guidance.</p>
+    <!-- Mariam Card -->
+    <div class="founder-card">
+      <div class="founder-inner">
+        <div class="founder-front">
+          <img src="images/Mariam-Founder.jpg" alt="Mariam Ramadan">
+          <h3>Mariam Ramadan</h3>
+          <p>English & Translation Mentor</p>
+          <span class="hint">Hover to read her story →</span>
+        </div>
+        <div class="founder-back">
+          <h3>Mariam Ramadan</h3>
+          <p>
+            Mariam graduated from the Faculty of Arts – English Section, Kafr El-Sheikh University.  
+            She served as a Teaching Assistant at the Arab Academy for Science, Technology & Maritime Transport, earning the admiration of colleagues and students alike.  
+          </p>
+          <p>
+            Though young, her presence commands respect. With patience, care, and passion, she helps learners become fluent English speakers and skilled interpreters.  
+            Mariam continues to learn and grow, giving her students more than just lessons—she gives them confidence and inspiration.
+          </p>
+        </div>
+      </div>
     </div>
-</div>
-</div>
 
-    <!-- COURSES PREVIEW -->
-<section id="courses" aria-labelledby="courses-title">
-<h3 id="courses-title" class="section-title">Featured Courses</h3>
-<div class="courses-grid">
-
-    <!-- Omar's Course -->
-    <article class="course" aria-labelledby="c1">
-    <img src="images/frontend-development.webp" alt="Frontend Development Course">
-    <h5 id="c1">Frontend Development with Omar</h5>
-    <p>Learn to build websites from scratch with <strong>HTML, CSS, JavaScript, and React</strong>.</p>
-    <div class="meta">
-        <span class="pill">Beginner–Intermediate</span>
-        <span style="margin-left:auto;color:var(--muted)">8 weeks</span>
-    </div>
-    </article>
-
-    <!-- Mariam's Course -->
-    <article class="course" aria-labelledby="c2">
-    <img src="images/English-Translate.webp" alt="English & Translation Course">
-    <h5 id="c2">English & Translation with Mariam</h5>
-    <p>Improve fluency and sharpen <strong>translation techniques</strong> for academic and professional growth.</p>
-    <div class="meta">
-        <span class="pill">All Levels</span>
-        <span style="margin-left:auto;color:var(--muted)">6 weeks</span>
-    </div>
-    </article>
-
-</div>
+  </div>
 </section>
 
-    <!-- VALUE / WHY CHOOSE -->
-    <section aria-labelledby="why-title">
-    <h3 id="why-title" class="section-title">Why edUKai?</h3>
-    <div class="value-row" role="list">
-        <div class="value" role="listitem">
-        <i class="fa-solid fa-chalkboard-teacher" aria-hidden="true"></i>
-        <h4 style="margin:8px 0 4px">Founder-led lessons</h4>
-        <p style="margin:0;color:var(--muted)">Learn directly from the creators of the courses.</p>
-        </div>
+<!-- __________________________________________________________________________________________________________________________ -->
 
-        <div class="value" role="listitem">
-        <i class="fa-solid fa-globe" aria-hidden="true"></i>
-        <h4 style="margin:8px 0 4px">Accessible everywhere</h4>
-        <p style="margin:0;color:var(--muted)">Online and flexible scheduling for students across the country.</p>
-        </div>
 
-        <div class="value" role="listitem">
-        <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
-        <h4 style="margin:8px 0 4px">Personal mentorship</h4>
-        <p style="margin:0;color:var(--muted)">Small-group mentoring and feedback loops.</p>
-        </div>
+<!-- COURSES PREVIEW -->
+<section id="courses" aria-labelledby="courses-title">
+  <h3 id="courses-title" class="section-title">Featured Courses</h3>
+  <div class="courses-grid">
 
-        <div class="value" role="listitem">
-        <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-        <h4 style="margin:8px 0 4px">Certificate of completion</h4>
-        <p style="margin:0;color:var(--muted)">Showcaseable credentials for career steps.</p>
-        </div>
+<!-- Frontend Development -->
+<article class="course-card">
+  <div class="course-inner">
+    
+    <!-- Front -->
+    <div class="course-front">
+      <img src="images/frontend-development.webp" alt="Frontend Development Course">
+      <h3>Frontend Development</h3>
+      <p class="instructor">Instructor <strong>Omar Gouda</strong></p>
+      <span class="pill">Beginner – Intermediate</span>
+      <span class="pill coming-soon">+ Frameworks Coming Soon</span>
     </div>
-    </section>
 
-    <!-- TESTIMONIALS -->
-    <section aria-labelledby="testi-title">
-    <h3 id="testi-title" class="section-title">Student Stories</h3>
-    <div class="testimonials">
-        <div class="testimonial">
-        <p>"edUKai helped me build a real portfolio and land my first job. Omar's feedback was direct and practical."</p>
-        <div class="who">— Ahmed, Web Dev Graduate</div>
-        </div>
-
-        <div class="testimonial">
-        <p>"Mariam's lessons made complex topics feel simple. The mentorship sessions were the real game changer."</p>
-        <div class="who">— Sara, Data Skills Student</div>
-        </div>
+    <!-- Back -->
+    <div class="course-back">
+      <h3>Frontend Development</h3>
+      <p>
+        Build your web development foundation step by step with 
+        <strong>HTML, CSS, and JavaScript</strong>.  
+        This course gives you the skills to create modern, responsive websites 
+        and prepares you for more advanced tools.  
+      </p>
+<!--       <p class="note">
+        Upcoming modules will introduce frameworks such as 
+        <strong>Angular</strong> and <strong>React</strong>, 
+        which are being carefully developed by your instructor to ensure quality and depth.
+      </p> -->
+      <div class="meta">
+        <span class="pill">8 Weeks</span>
+      </div>
+      <button class="btn">Enroll Now</button>
+      <a href="#founders" class="btn secondary">Meet the Instructor</a>
     </div>
-    </section>
 
-    <!-- CTA BANNER -->
-    <section aria-labelledby="cta-title">
-    <div class="cta-banner" role="region" aria-label="Ready to start">
-        <div>
-        <h3 id="cta-title" style="margin:0 0 6px">Ready to start your journey?</h3>
-        <div style="color:rgba(0,0,0,0.7)">Join edUKai today — limited seats for personalized mentorship.</div>
+  </div>
+</article>
+
+
+    <!-- English Language -->
+    <article class="course-card">
+      <div class="course-inner">
+        <!-- Front -->
+        <div class="course-front">
+          <img src="images/English-lang-course.webp" alt="English Language Course">
+          <h3>English Language</h3>
+          <p class="instructor">Instructor: <strong>Mariam Ramadan</strong></p>
+          <span class="pill">All Levels</span>
         </div>
-        <div class="cta-actions">
-        <a class="btn btn-register" href="#register">Register Now</a>
-        <a class="btn" style="background:transparent;color:var(--brand-purple);border:2px solid rgba(0,0,0,0.06)" href="#courses">Browse Courses</a>
+
+        <!-- Back -->
+        <div class="course-back">
+          <h3>English Language</h3>
+          <p>
+            Enhance your English communication skills and build confidence in real-world use.  
+            Each student follows a personalized learning plan designed to ensure steady progress 
+            and maximum benefit from the course.
+          </p>
+          <div class="meta">
+            <span class="pill">6 Weeks</span>
+          </div>
+<!--           <button class="btn">Enroll Now</button> -->
+          <button class="btn">Take Enrollment Test</button>
+          <a href="#founders" class="btn secondary">Meet the Instructor</a>
         </div>
+      </div>
+    </article>
+
+    <!-- Simultaneous Interpretation -->
+    <article class="course-card">
+      <div class="course-inner">
+        <!-- Front -->
+        <div class="course-front">
+          <img src="images/Simultaneous-Interpretation.webp" alt="Simultaneous Interpretation Course">
+          <h3>Simultaneous Interpretation</h3>
+          <p class="instructor">Instructor: <strong>Mariam Ramadan</strong></p>
+          <span class="pill">Advanced</span>
+        </div>
+
+        <!-- Back -->
+        <div class="course-back">
+          <h3>Simultaneous Interpretation</h3>
+          <p>
+            Train to become a professional simultaneous interpreter.  
+            This course is tailored for advanced learners and provides the 
+            expertise needed to excel in academic, professional, and global settings.
+          </p>
+          <div class="meta">
+            <span class="pill">12 Weeks</span>
+          </div>
+<!--  <button class="btn">Enroll Now</button> -->
+        <button class="btn">Take Enrollment Test</button>
+        <a href="#founders" class="btn secondary">Meet the Instructor</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ________________________________________________________________________________________________________________________ -->
+
+<!-- VALUE / WHY CHOOSE -->
+<section class="why-section" aria-labelledby="why-title">
+  <h3 id="why-title" class="section-title">Why edUKai?</h3>
+
+  <div class="why-grid" role="list">
+    <!-- Card 1 -->
+    <article class="why-card" role="listitem">
+      <div class="why-inner">
+        <!-- Front -->
+        <div class="why-front">
+          <i class="fa-solid fa-chalkboard-teacher" aria-hidden="true"></i>
+          <h4>Founder-led lessons</h4>
+        </div>
+        <!-- Back -->
+        <div class="why-back">
+          <p>Learn directly from the passionate founders who built these courses with students in mind.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="why-card" role="listitem">
+      <div class="why-inner">
+        <div class="why-front">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          <h4>Accessible everywhere</h4>
+        </div>
+        <div class="why-back">
+          <p>Study anytime, anywhere with flexible online learning that fits your lifestyle.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="why-card" role="listitem">
+      <div class="why-inner">
+        <div class="why-front">
+          <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+          <h4>Personal mentorship</h4>
+        </div>
+        <div class="why-back">
+          <p>Benefit from small-group mentoring, feedback loops, and real guidance tailored to you.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="why-card" role="listitem">
+      <div class="why-inner">
+        <div class="why-front">
+          <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+          <h4>Certificate of completion</h4>
+        </div>
+        <div class="why-back">
+          <p>Receive a professional certificate to showcase your skills and boost your career opportunities.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ________________________________________________________________________________________________________________________ -->
+
+<!-- STUDENT STORIES (HIDDEN UNTIL NEEDED) -->
+<!--
+<section aria-labelledby="testi-title">
+  <h3 id="testi-title" class="section-title">Student Stories</h3>
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>"edUKai helped me build a real portfolio and land my first job. Omar's feedback was direct and practical."</p>
+      <div class="who">— Ahmed, Web Dev Graduate</div>
     </div>
-    </section>
+
+    <div class="testimonial">
+      <p>"Mariam's lessons made complex topics feel simple. The mentorship sessions were the real game changer."</p>
+      <div class="who">— Sara, Data Skills Student</div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ========== COURSE PRICES ========== -->
+<!-- COURSES PRICING -->
+<section aria-labelledby="pricing-title">
+  <h3 id="pricing-title" class="section-title">Our Courses & Pricing</h3>
+  <div class="founders-grid">
+
+    <!-- Frontend Development -->
+    <article class="course-card-static">
+      <h3>Frontend Development</h3>
+      <p class="hint">Cheapest in the Market</p>
+      <p><strong>Price:</strong> 3000 EGP</p>
+      <p><strong>Deposit:</strong>750 EGP</p>
+      <p>
+        Online sessions with full roadmap provided after enrollment.  
+        Pay only <strong>750 EGP deposit</strong> to secure your spot.
+      </p>
+      <button class="btn">Enroll Now</button>
+      <a href="courses.html" class="btn secondary">Learn More</a>
+    </article>
+
+    <!-- English Course -->
+    <article class="course-card-static">
+      <h3>English Course</h3>
+      <p><strong>Price:</strong> 1200 EGP per level</p>
+      <p><strong>Deposit:</strong>300 EGP</p>
+      <p>
+        12 Levels available — start for only 1200 EGP per level.  
+        Initial test with <strong>120 EGP</strong>, then complete deposit with <strong>180 EGP</strong>.  
+        A personalized learning plan & schedule will be sent once deposit is complete.
+      </p>
+      <button class="btn">Enroll Now</button>
+      <a href="courses.html" class="btn secondary">Learn More</a>
+    </article>
+
+    <!-- Interpretation Course -->
+    <article class="course-card-static">
+      <h3>Interpretation Course</h3>
+      <p class="hint">Simultaneous & Consecutive</p>
+      <p><strong>Price:</strong> 5000 EGP</p>
+      <p><strong>Deposit:</strong>1250 EGP</p>
+      <p>
+        Learn both simultaneous and consecutive interpretation.  
+        Start with a test for <strong>500 EGP</strong>, then complete deposit with <strong>750 EGP</strong>.  
+        A tailored learning plan will follow once payment is confirmed.
+      </p>
+      <button class="btn">Enroll Now</button>
+      <a href="courses.html" class="btn secondary">Learn More</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ________________________________________________________________________________________________________________________ -->
+
+<!-- CTA BANNER -->
+<section aria-labelledby="cta-title">
+  <div class="cta-banner" role="region" aria-label="Ready to start">
+    <div>
+      <h3 id="cta-title">Ready to start your journey?</h3>
+      <p class="cta-sub">Join edUKai today — limited seats for personalized mentorship.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-register" href="signup.html">Register Now</a>
+      <a class="btn btn-secondary" href="courses.html">Browse Courses</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ________________________________________________________________________________________________________________________ -->
 
     <!-- BLOG / RESOURCES -->
-    <section id="blog" aria-labelledby="blog-title">
+<!--     <section id="blog" aria-labelledby="blog-title">
     <h3 id="blog-title" class="section-title">From the Blog</h3>
     <div class="blog-grid">
         <article class="blog">
@@ -260,46 +482,238 @@ to share practical, career-ready skills with students nationwide.
         <p>Overview of no-cost tools for projects, design, and study planning.</p>
         </article>
     </div>
-    </section>
+    </section> -->
+
+<!-- ________________________________________________________________________________________________________________________ -->
+
+<!-- UPCOMING COURSES -->
+<!-- <section aria-labelledby="upcoming-title" class="upcoming-section">
+  <h3 id="upcoming-title" class="section-title">Upcoming Courses</h3>
+  <div class="courses-grid">
+    <div class="course-card static">
+      <div class="course-front">
+        <h3>React Advanced</h3>
+        <p class="instructor">Level: Intermediate–Advanced</p>
+        <span class="pill coming-soon">Coming Soon</span>
+      </div>
+    </div>
+    <div class="course-card static">
+      <div class="course-front">
+        <h3>Business English</h3>
+        <p class="instructor">Level: Beginner–Professional</p>
+        <span class="pill coming-soon">Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- _______________________________________________________________________________________________________________________ -->
+
+<!-- SUCCESS PATH -->
+<section aria-labelledby="path-title" class="path-section">
+  <h3 id="path-title" class="section-title">Your Success Path</h3>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-front">
+        <i class="fa-solid fa-user-plus"></i>
+        <h4>Step 1: Enroll</h4>
+      </div>
+      <div class="why-back"><p>Secure your spot with a small deposit and start your journey.</p></div>
+    </div>
+    <div class="why-card">
+      <div class="why-front">
+        <i class="fa-solid fa-book-open"></i>
+        <h4>Step 2: Plan</h4>
+      </div>
+      <div class="why-back"><p>Receive a personalized roadmap tailored to your goals.</p></div>
+    </div>
+    <div class="why-card">
+      <div class="why-front">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h4>Step 3: Learn</h4>
+      </div>
+      <div class="why-back"><p>Engage in interactive online sessions with mentorship.</p></div>
+    </div>
+    <div class="why-card">
+      <div class="why-front">
+        <i class="fa-solid fa-award"></i>
+        <h4>Step 4: Achieve</h4>
+      </div>
+      <div class="why-back"><p>Complete the course, earn your certificate, and level up your career.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ________________________________________________________________________________________________________________________ -->
+
+<!-- OFFERS -->
+<section aria-labelledby="offers-title" class="offers-section">
+  <h3 id="offers-title" class="section-title">Special Offers</h3>
+  <div class="courses-grid">
+    <div class="story-card">
+      <h4 style="color:var(--brand-purple)">Early Bird Discount</h4>
+      <p>Register this month and get <strong>10% off</strong> on your first course.</p>
+    </div>
+    <div class="story-card">
+      <h4 style="color:var(--brand-purple)">Referral Rewards</h4>
+      <p>Bring a friend and both receive <strong>exclusive bonuses</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ________________________________________________________________________________________________________________________ -->
+
+<!-- FAQ -->
+<section aria-labelledby="faq-title" class="faq-section">
+  <h3 id="faq-title" class="section-title">Frequently Asked Questions</h3>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q">Are the sessions live or recorded? <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a">Most sessions are live with replays available so you never miss out.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do I get a certificate? <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a">Yes! Every completed course comes with a shareable certificate.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How do I enroll? <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a">Click "Enroll Now," pay the deposit, and receive your roadmap instantly.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ________________________________________________________________________________________________________________________ -->
+
+<!-- COMMUNITY -->
+<section aria-labelledby="community-title" class="community-section">
+  <h3 id="community-title" class="section-title">Join Our Community</h3>
+  <div class="story-card">
+    <p>Be part of the <strong>first cohort</strong> of edUKai learners 🚀.  
+       Get early access, mentorship, and special perks for joining now!</p>
+    <a href="signup.html" class="btn">Join Now</a>
+  </div>
+</section>
+
 </main>
 
+<!-- ________________________________________________________________________________________________________________________ -->
+
 <!-- FOOTER -->
-<footer>
-    <div class="container">
+<footer class="site-footer">
+  <div class="container">
     <div class="footer-grid">
-        <div>
-        <strong>edUKai</strong>
-        <p style="color:var(--muted);margin-top:8px">Founder-led courses & mentorship. Learn anywhere, grow forever.</p>
-        </div>
-        <div>
-        <strong>Quick Links</strong>
-        <ul style="list-style:none;padding:10px 0;margin:0;color:var(--muted)">
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+      <!-- Brand -->
+      <div class="footer-col brand">
+        <h3 class="footer-logo">edUKai</h3>
+        <p>Founder-led courses & mentorship.<br> Learn anywhere, grow forever.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        </div>
+      </div>
 
-        <div>
-        <strong>Contact</strong>
-        <p style="color:var(--muted);margin-top:8px">omarmuhammad8001@outlook.com<br> +20 101 700 9415</p>
-        </div>
+      <!-- Support -->
+      <div class="footer-col">
+        <h4>Customer Support</h4>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:omarmuhammad8001@outlook.com">Email Us</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+201017009415">+20 101 700 9415</a></li>
+          <li><i class="fa-solid fa-headset"></i> <a href="#support">Live Support</a></li>
+        </ul>
+      </div>
 
-        <div>
-        <strong>Follow</strong>
-        <p style="margin-top:8px">
-            <a href="#" aria-label="Instagram" style="margin-right:10px"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook" style="margin-right:10px"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        </p>
+      <!-- Social -->
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         </div>
+      </div>
+
     </div>
 
-    <div style="margin-top:18px;color:var(--muted);font-size:.95rem">
-        © <span id="year"></span> edUKai • All rights reserved
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> edUKai • All rights reserved</p>
     </div>
-    </div>
+  </div>
 </footer>
+
+<!-- Intro Video Modal -->
+<div id="introModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <video controls autoplay>
+      <source src="images/short1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+
+
+<!-- ✅ Structured Data (SEO Rich Results) -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "edUKai",
+    "url": "https://yourwebsite.com",
+    "logo": "https://yourwebsite.com/images/logo.png",
+    "founders": [
+        {"@type": "Person", "name": "Omar Gouda"},
+        {"@type": "Person", "name": "Mariam Ramadan"}
+    ],
+    "description": "edUKai is a teaching company offering authentic, personalized courses and mentorship founded by Omar Gouda & Mariam Ramadan.",
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Egypt"
+    };
+};
+
+  document.querySelectorAll(".faq-q").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      btn.parentElement.classList.toggle("active");
+    });
+  });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Modal functionality
+
+  const modal = document.getElementById("introModal");
+  const btn = document.getElementById("watch-intro");
+  const span = document.querySelector(".close");
+
+  btn.onclick = function(e) {
+    e.preventDefault();
+    modal.style.display = "flex";
+  };
+
+  span.onclick = function() {
+    modal.style.display = "none";
+    modal.querySelector("video").pause(); // stop video
+  };
+
+  window.onclick = function(e) {
+    if (e.target == modal) {
+      modal.style.display = "none";
+      modal.querySelector("video").pause();
+    };
+  };
+
+
+
+</script>
+
 </body>
 </html>
