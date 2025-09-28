@@ -1,0 +1,110 @@
+/* ========== Admin Dashboard Styling ========== */
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+main section {
+  background: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+main section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--brand-purple);
+  position: relative;
+}
+
+main section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--brand-pink);
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
+/* Forms */
+form {
+  display: grid;
+  gap: 1rem;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--brand-purple);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2); /* purple glow */
+  outline: none;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Buttons */
+form button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-pink));
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, var(--brand-pink), var(--brand-purple));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+
+/*script css*/
+
+/* update in hd-ft.css or styles.css */
+.user-menu { position: relative; display: inline-block; cursor: pointer; }
+.user-menu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  color: #333;
+  list-style: none;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  min-width: 180px;
+  z-index: 999;
+}
+.user-menu .dropdown.show {
+  display: block;
+}
+.user-menu .dropdown li { padding: 8px 12px; }
+.user-menu .dropdown li a { color: #333; text-decoration: none; display:block; }
+.user-menu .dropdown li a:hover { color: var(--brand-purple); }
+/* end of script css */
